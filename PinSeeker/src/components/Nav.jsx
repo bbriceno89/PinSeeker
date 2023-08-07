@@ -1,7 +1,10 @@
 import { Link } from "react-router-dom"
 
-const Nav = () => {
-    
+const Nav = ({ authToken, minimal, setShowModal, showModal, setIsSignUp }) => {
+    const handleClick = () => {
+      setShowModal(true);
+      setIsSignUp(false);
+    };
     return (
         <nav>
             <div className="logo-container">PINSEEKER</div>
@@ -12,6 +15,15 @@ const Nav = () => {
             <button>Friends</button>
         <div></div>
         </div>
+
+        
+        <button
+          className="nav-button"
+          onClick={handleClick}
+          disabled={showModal}
+        >
+          Log in
+        </button>
 
         </nav>
     )

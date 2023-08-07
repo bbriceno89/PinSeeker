@@ -39,7 +39,7 @@ const Profile = () => {
         <div className="profile">
             <div className="profile__header">
                 <div className="profile__header__image">
-                    <img src="https://www.pngitem.com/pimgs/m/146-1468479_my-profile-icon-blank-profile-picture-circle-hd.png" alt="profile"/>
+                    <img src="https://i.pinimg.com/280x280_RS/a9/e6/7d/a9e67d96647585aee6f0efebf577c797.jpg" alt="profile"/>
                 </div>
                 <div className="profile__header__info">
                     <h2>First Name</h2>
