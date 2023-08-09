@@ -69,7 +69,7 @@ const Dashboard = () => {
             
         <div className='dashboard'>
             <div className='chat-container'>
-               chat container
+            ChatContainer
             </div>
             <div className='swiper-container'>
                 <div className='card-container'>

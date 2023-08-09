@@ -29,12 +29,16 @@ const AuthModal = ({ setShowModal,  isSignUp }) => {
                 return
             }
 
-            const response = await axios.post('http://localhost:8000/signup', { email, password })
+            const response = await axios.post(`http://localhost:8000/${isSignUp ? 'signup' : 'login'}`, { email, password })
 
-            
+            setCookie('AuthToken', response.data.token)
+            setCookie('UserId', response.data.userId)
+
             const success = response.status === 201
+            if (success && isSignUp) navigate ('/onboarding')
+            if (success && !isSignUp) navigate ('/dashboard')
 
-            if (success) navigate('/onboarding')
+            window.location.reload()
 
         } catch (error) {
             console.log(error)
@@ -47,7 +51,7 @@ const AuthModal = ({ setShowModal,  isSignUp }) => {
             <div className="close-icon" onClick={handleClick}>ⓧ</div>
 
             <h2>{isSignUp ? 'CREATE ACCOUNT': 'LOG IN'}</h2>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit}> 
                 <input
                     type="email"
                     id="email"
