@@ -13,39 +13,31 @@ h2 {
 }
 
 .primary-title {
-  font-size: 90px;
-  color: rgb(255, 255, 255);
+  font-size: 140px; 
+  font-weight: 900;
+  color: rgb(249, 249, 19);
+  background: linear-gradient(260deg, rgb(13, 219, 6), rgb(233, 227, 227));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
 }
 
 .primary-button {
   color: rgb(255,255,255);
   text-transform: uppercase;
   font-size: 15px;
-  background: linear-gradient(45deg, rgb(28, 198, 40), rgb(17, 219, 34));
+  background: linear-gradient(180deg, rgb(13, 219, 6), rgb(233, 227, 227));
   padding: 12px 30px;
   border-radius: 30px;
   border: none;
 }
 
 .primary-button:hover {
-  background: linear-gradient(260deg, rgb(69, 254, 48), rgb(80, 255, 64));
-}
-
-.secondary-button {
-  color: rgb(1, 73, 25);
-  background-color: rgb(255, 255, 255);
-  font-weight: 500;
-  font-size: 15px;
-  text-transform: uppercase;
-  padding: 12px 30px;
-  border-radius: 30px;
-  border: solid 2px rgb(121, 119, 119);
-  margin: 6px;
-}
-
-.secondary-button:hover {
   color: rgb(48, 48, 48);
   border: solid 2px rgb(48, 48, 48);
+  background: linear-gradient(180deg, rgb(233, 227, 227), rgb(13, 219, 6));
+  
 }
 
 
@@ -58,18 +50,19 @@ nav {
 }
 
 nav .nav-button {
-  color: rgb(8, 65, 5);
-  background-color: rgb(255, 255, 255);
-  font-size: 20px;
+  color: rgb(24, 206, 15);
+  background-color: rgb(16, 164, 60);
+  font-size:20px;
+  font: rgb(255, 255, 255);
   padding: 10px 20px;
   border-radius: 10px;
   border: none;
   margin: 10px;
 }
 
-nav .nav-button:disabled {
+nav .nav-button:hover {
   background-color: rgb(181, 180, 180);
-  color: rgb(3, 49, 10);
+  color: rgb(223, 244, 226);
 }
 
 nav .logo-container {
@@ -95,7 +88,8 @@ nav .logo-container .logo {
 }
 
 .home {
-  margin-top: 30vh;
+  margin-top: 15vh;
+
 }
 
 /*-------- Auth Modal --------*/
@@ -122,6 +116,16 @@ nav .logo-container .logo {
   flex-direction: column;
 }
 
+.auth-modal input[type=submit] {
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background-color: rgb(16, 164, 60);
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+}
+
 .auth-modal input[type=password],
 .auth-modal input[type=email] {
   padding: 8px;
@@ -130,6 +134,19 @@ nav .logo-container .logo {
 }
 
 /*-------- OnBoarding Page --------*/
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0.65) 0%,
+          rgba(0, 0, 0, 0) 100%
+  ), url('images/6e9794bcedeecf5a8f8f41338a2a7345.webp')
+}
+
+
+
 .onboarding {
   border-top: solid 1px rgb(213, 213, 213);
 }
@@ -180,18 +197,24 @@ nav .logo-container .logo {
   border-radius: 10px;
   transition: all 0.3s;
   margin-right: 10px;
+  cursor: pointer;
+
 }
 
 .onboarding form input[type=radio] {
-  display: none;
+  display: none
 }
 
 .onboarding form input[type=number] {
   width: 10%;
+
 }
 
 .onboarding form input[type=radio]:checked + label {
   border: solid 2px rgb(22, 221, 32);
+  background-color: rgb(22, 221, 32);
+  color: rgb(255, 255, 255);
+
 }
 
 .onboarding form input[type=submit]:hover {
@@ -207,6 +230,18 @@ nav .logo-container .logo {
 }
 
 /*-------- Dashboard  --------*/
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0.65) 0%,
+          rgba(0, 0, 0, 0) 100%
+  ), url('images/6e9794bcedeecf5a8f8f41338a2a7345.webp')
+}
+
+
 .dashboard {
   display: flex;
   justify-content: space-between;
@@ -239,7 +274,7 @@ nav .logo-container .logo {
 }
 
 .card h3 {
-  margin-top: 0;
+  margin-top: 100;
 }
 
 .dashboard .swipe-info {
@@ -249,6 +284,19 @@ nav .logo-container .logo {
 }
 
 /*-------- Chat Container --------*/
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0.65) 0%,
+          rgba(0, 0, 0, 0) 100%
+  ), url('images/6e9794bcedeecf5a8f8f41338a2a7345.webp')
+}
+
+
+
 .chat-container {
   background-color: rgb(255, 255, 255);
   box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,

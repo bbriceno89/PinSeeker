@@ -7,22 +7,35 @@ const Nav = ({ authToken, minimal, setShowModal, showModal, setIsSignUp }) => {
     };
     return (
         <nav>
-            <div className="logo-container">PINSEEKER</div>
-            <div className="home_buttons">
-            <Link to="/"><button>Home</button></Link>
-            <Link to="/profile"><button>Profile</button></Link>
-            <Link to="/courses"><button>Courses</button></Link>
-            <button>Friends</button>
-        <div></div>
-        </div>
+           
+            <button
+              className="primary-button" >
+            <Link to="/">Home</Link>
+            </button>
+            
+            <button
+              className="primary-button" >
+            <Link to="/profile">Profile</Link>
+            </button>
+         
+            <button
+              className="primary-button" >
+            <Link to="/courses">Courses</Link>
+            </button>
+        
+          <button
+            className="primary-button" >
+            <Link to="/dashboard">Dashboard</Link>
+          </button>
+  
 
         
         <button
-          className="nav-button"
+          className="primary-button"
           onClick={handleClick}
           disabled={showModal}
         >
-          Log in
+        Log In
         </button>
 
         </nav>

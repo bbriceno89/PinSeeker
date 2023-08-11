@@ -66,10 +66,11 @@ const Dashboard = () => {
     return (
         <>
             <Nav/>
-            
-        <div className='dashboard'>
+            <div className='overlay'>
+        <div className='dashboard'>    
+        
             <div className='chat-container'>
-            ChatContainer
+                chat container here 
             </div>
             <div className='swiper-container'>
                 <div className='card-container'>
@@ -91,6 +92,7 @@ const Dashboard = () => {
                     </TinderCard>
                 ))}
             </div>
+        </div>
         </div>
         </div>
         </>

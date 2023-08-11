@@ -36,22 +36,27 @@ const Profile = () => {
     return (
         <>
         <Nav/>
+        <div className="overlay">
         <div className="profile">
             <div className="profile__header">
                 <div className="profile__header__image">
-                    <img src="https://i.pinimg.com/280x280_RS/a9/e6/7d/a9e67d96647585aee6f0efebf577c797.jpg" alt="profile"/>
+                    <img src="https://media.istockphoto.com/id/1319208308/photo/golfer-on-the-professional-golf-course-golfer-with-golf-club-hitting-the-ball-for-the-perfect.jpg?s=612x612&w=0&k=20&c=ESnz-kvyLFIeicdzspLjUonFIoCyPOrkOiEjQmMtsLk=" alt="profile"/>
                 </div>
                 <div className="profile__header__info">
-                    <h2>First Name</h2>
-                    <h3>Handicap</h3>
-                    <h3>Preferred Course</h3>
-                    <h3>Style</h3>
+                    <h2>First Name:</h2>
+                    <p> Beau </p>
+                    <h2>Handicap</h2>
+                    <p> 10 </p>
+                    <h2>Preferred Course</h2>
+                    <p> Pebble Beach </p>
+                    <h2>Style</h2>
+                    <p> Casual </p>
                 </div>
             </div>
             <div className="profile__body">
                 <div className="profile__body__about">
                     <h2>About Me</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+                    <p>I love golf!</p>
                 </div>
                 <div className="profile__body__matches">
                     <h2>Matches</h2>
@@ -84,6 +89,7 @@ const Profile = () => {
             <button className="home__button" onClick={handleClick}>Find a round</button>
             <button className="home__button" onClick={handleClick}>Host a round</button>
         </div>
+     </div>
      </div>
      </>
     )
